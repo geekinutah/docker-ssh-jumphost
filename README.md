@@ -1,4 +1,4 @@
-# docker-jumpbox
+# ssh-jumpbox
 
 Re-work of warden/docker-jumphost which is an extended Docker image to run an SSH server.
 
