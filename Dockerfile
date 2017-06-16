@@ -7,10 +7,6 @@ RUN apt-get -q update >/dev/null \
   && apt-get install -y openssh-server \
   && mkdir /var/run/sshd \
 
-  # Auto-create user's homedir
-  && echo -e "\n# Auto-create user's homedir" >> /etc/pam.d/common-account \
-  && echo "session    required   pam_mkhomedir.so skel=/etc/skel/ umask=${HOMEDIR_UMASK:-0077}" >> /etc/pam.d/common-account \
-
   # Cleanup
   && apt-get clean autoclean \
   && apt-get autoremove --yes \

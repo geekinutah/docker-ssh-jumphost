@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ -n $USER ]; then
   echo "INFO: Creating user $USER";
-  useradd -s /bin/bash $USER;
+  useradd -m -s /bin/bash $USER;
 fi
 
 mkdir /home/$USER/.ssh
